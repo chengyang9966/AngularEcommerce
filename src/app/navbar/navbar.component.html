@@ -1,0 +1,11 @@
+
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li class="mt-1" ngbNavItem *ngFor="let item of navbarItems">
+      <a [routerLink]="item?.['path']" ngbNavLink>{{item?.['name']}}</a>
+    </li>
+
+    <li class="nav-item" ngbDropdown>
+      <app-dropdown [dropDownItem]="dropDownItmes"></app-dropdown>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
