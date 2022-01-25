@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -12,7 +11,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
-
+import { MyOdersComponent } from './my-oders/my-oders.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ProductComponent } from './product/product.component';
+import { CheckOutComponent } from './check-out/check-out.component';
+import { SuccessComponent } from './success/success.component';
+import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,15 @@ import { environment } from 'src/environments/environment';
     DropdownComponent,
     ShoppingCartComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MyOdersComponent,
+    LoginComponent,
+    LogoutComponent,
+    ProductComponent,
+    CheckOutComponent,
+    SuccessComponent,
+    AdminProductsComponent,
+    AdminOrdersComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +45,6 @@ import { environment } from 'src/environments/environment';
     provideFirestore(() => getFirestore()),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
